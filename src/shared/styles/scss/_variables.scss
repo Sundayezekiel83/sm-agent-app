@@ -1,0 +1,60 @@
+// colors [update colorScheme in src/default/index.js]
+$primary: #2db2ff;
+$faint-primary: #2db2ff19;
+$faint-primary-2: #bce0fd;
+$faint-primary-3: #6c63ff19;
+$faint-primary-4: #2db2ff;
+$dark-primary: #2699fb;
+$dark-primary-2: #6c63ff;
+
+$danger: #ea3a3d;
+$faint-danger: #ea3a3d3f;
+$faint-danger-2: #ea3a3d19;
+$faint-danger-3: #ea3a3d;
+
+$success: #1ad598;
+$faint-success: #1ad5981a;
+$faint-success-2: #1ad598;
+$faint-success-3: #1ad59819;
+
+$gray: #06152b7f;
+$dark-gray: darkgrey;
+$dark-gray-2: #06152b19;
+$dark-gray-3: #06152b0c;
+
+$faint-gray: #e6e6e6;
+
+$orange: #f9b959; // starred
+$faint-orange: #f9b9591a;
+$faint-orange-2: #f9b959;
+$faint-orange-3: #f9b9593f; // unstarred
+
+$white: #ffffff;
+$black: black;
+
+$dark-background: #06152b;
+$dark-background-300: #0d224241;
+$dark-background-500: rgb(185, 185, 185);
+$white-background: #ffffff;
+$modal-body-background: #06152b7f;
+$gray-background: #f1f1f1;
+$blue: #060755;
+
+$border: #06152b;
+$border-2: #06152b3f;
+$border-3: #00000029;
+$border-4: slategrey;
+
+$box-shadow-color: #ccc;
+
+$sidebar-section-title-color: #616161;
+
+$box-shadow: 0 0 7px $box-shadow-color;
+
+// device width [bootstrap grid breakpoints]
+$zero: 0px;
+$xs: 575px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
