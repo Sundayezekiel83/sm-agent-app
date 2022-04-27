@@ -84,7 +84,7 @@ function Sidebar({ ...props }) {
         </div>
         <Height val={7} />
         <div className="ppaction">
-          <div className="profile-holder">
+          {/* <div className="profile-holder">
             <div
               className="name-circle"
               onClick={minimize && (() => setShowAddBusiness(!showAddBusiness))}
@@ -117,7 +117,7 @@ function Sidebar({ ...props }) {
                 </Link>
               </div>
             </div>
-          }
+          } */}
         </div>
         <Height val={20} />
 
@@ -152,13 +152,15 @@ function Sidebar({ ...props }) {
                         >
                           {page.icon}
                           {!minimize && <span>{page.label}</span>}
-                          {page.label == 'Message' && <span className="messagesNum">10</span>}
+                          {page.label === 'Message' && <span className="messagesNum">10</span>}
                         </div>
                       </Link>
                     </React.Fragment>
                   );
                 }
               }
+            }else{
+              return;
             }
           })}
         </div>

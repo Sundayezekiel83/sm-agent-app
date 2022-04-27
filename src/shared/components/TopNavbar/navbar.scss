@@ -1,0 +1,75 @@
+@import '../../styles/scss/variables.scss';
+
+.navbar {
+  height: 69px;
+  width: 100%;
+  // background: $white-background;
+  padding-top: 10px;
+  padding-right: 37px;
+
+  display: flex;
+  justify-content: space-between;
+  .user-info {
+    display: flex;
+    float: right;
+    div {
+      padding: 0 5.5px;
+    }
+    .notifications-wrapper {
+      position: relative;
+      // ._status {
+      //   position: absolute;
+      //   border: 1px solid $black;
+      //   background: $black;
+      //   height: 5px !important;
+      //   width: 3px !important;
+      //   border-radius: 50% !important;
+      // }
+
+      .bell-wrapper {
+        border: 1px solid rgb(155, 153, 153);
+        border-radius: 4px;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      .mark-as-done {
+        color: $primary;
+        svg {
+          margin-right: 3px;
+        }
+      }
+      .notifs {
+        margin-top: 15px;
+        .status {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          border: 1px solid $primary;
+          background: $primary;
+          margin-top: 7px;
+          margin-left: -8px;
+          margin-right: 6px;
+        }
+        .time {
+          margin-top: 3px;
+          margin-left: 5px;
+        }
+        .notification-divider {
+          background-color: $gray-background !important;
+          margin-top: 11.5px;
+          margin-left: -5px;
+        }
+        .view-all-messages {
+          margin-top: 16.3px;
+          margin-bottom: 5.5px;
+        }
+      }
+    }
+    .profile-wrapper {
+      position: relative;
+      .profile-dropdown-option {
+        margin-bottom: 18px;
+      }
+    }
+  }
+}
