@@ -1,0 +1,31 @@
+.card-counter {
+    box-shadow: 2px 2px 10px #DADADA;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: max-content;
+    border-radius: 10px;
+    transition: .3s linear all;
+        
+}
+
+.card-counter:hover {
+    box-shadow: 4px 4px 20px #DADADA;
+    transition: .3s linear all;
+    background-color: black;
+    color: #fff;
+}
+
+.icon{
+    background-color: #e6dddda7;
+    width: max-content;
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 20px;
+    transition: .3s linear all;
+}
+
+.icon:hover{
+    background-color: #fff;
+}
+

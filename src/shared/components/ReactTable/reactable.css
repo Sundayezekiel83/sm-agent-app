@@ -1,0 +1,11 @@
+
+.bg-table{
+    background: #808080;
+}
+.buton{
+    padding: 0.8rem;
+    background-color: black;
+    color: #fff;
+    border-radius: 2rem;
+    text-align: center;
+}
