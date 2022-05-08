@@ -1,0 +1,78 @@
+@import '../../../shared/styles/scss/variables';
+
+.table-unstriped > tbody > tr:nth-child(odd) > td,
+.table-unstriped > tbody > tr:nth-child(even) > td {
+  background-color: white;
+}
+
+.row {
+  .somethings {
+    .history-search {
+      display: inline-block;
+      .d-flex.shu {
+        margin-left: 20px;
+        width: max-content;
+        align-items: center;
+        box-shadow: 2px 2px 4px 3px rgba(66, 66, 66, 0.13);
+        border-radius: 4px;
+        cursor: pointer;
+        .search-wrapper {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 3px;
+        }
+        input {
+          border: none;
+          &:focus {
+            border: none;
+          }
+        }
+        @media (max-width: $lg) {
+          .history-wrapper {
+            padding: 8px 12px;
+
+            span {
+              font-size: 15px;
+            }
+          }
+          .search-wrapper {
+            width: 35px;
+            height: 35px;
+            svg {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .add-area {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+    .add-item-wrapper {
+      border-radius: 20px;
+      padding: 10px 15px;
+      color: white;
+      background-color: rgb(4, 4, 56);
+      cursor: pointer;
+      span {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  @media (max-width: $sm) {
+    .add-area {
+      .add-item-wrapper {
+        border-radius: 15px;
+        font-size: 15px;
+        padding: 8px 12px;
+      }
+    }
+  }
+}

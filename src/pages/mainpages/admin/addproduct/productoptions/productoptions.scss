@@ -1,0 +1,108 @@
+@import '../../../../../shared/styles/scss/variables';
+
+.row {
+  .new_option_button {
+    width: 100%;
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: $blue;
+  }
+}
+
+.options {
+  margin-bottom: 15px;
+  .option-wrapper {
+    .option-top {
+      justify-content: space-between;
+      align-items: center;
+      .optionname {
+        color: $blue;
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 0;
+      }
+      .option-title-input-wrapper {
+        input {
+          width: 100%;
+          padding: 7px 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+          &::placeholder {
+            font-size: 12px;
+            color: grey;
+          }
+          &:focus {
+            outline: 1px solid rgba($blue, 0.7);
+          }
+        }
+      }
+    }
+    .value-wrapper {
+      .values {
+        background-color: $blue;
+        color: white;
+        padding: 7px 12px;
+        font-weight: 500;
+        border-radius: 3px;
+        position: relative;
+        .x-icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          cursor: pointer;
+          &:hover {
+            color: red;
+            font-size: 18px;
+          }
+        }
+      }
+      .val-text {
+        font-size: 14px;
+      }
+      .jjh {
+        flex-wrap: wrap;
+      }
+      .value-input-wrapper {
+        input {
+          width: 90%;
+          padding: 3px 6px 6px 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          &::placeholder {
+            font-size: 12px;
+            color: grey;
+          }
+          &:focus {
+            outline: 1px solid rgba($blue, 0.7);
+          }
+        }
+        button {
+          outline: none;
+          border: none;
+          background-color: transparent;
+          color: $blue;
+          padding: 5px 10px;
+          border-radius: 3px;
+          border: 2px solid $blue;
+          box-shadow: 0 0 7px #ccc;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: $blue;
+            color: white;
+          }
+        }
+      }
+    }
+    .new-value-btn {
+      width: 100%;
+      padding: 5px 15px;
+      background-color: $blue;
+      color: white;
+      text-align: center;
+    }
+  }
+}

@@ -5,7 +5,8 @@ import AdminDashboard from '../pages/mainpages/admin/dashboard/admindashboard';
 import Customer from '../pages/mainpages/customer/customer';
 import AppLayout from '../pages/shared/applayout/applayout';
 import { userTypes } from '../shared/utils/userTypes';
-import MyProperties from '../shared/components/myproperties/MyProperties';
+import MyProperties from '../pages/mainpages/admin/properties/MyProperties';
+import AddProperties from '../pages/mainpages/admin/addproduct/addproperties';
 
 const roleComponent = ({ CustomerComponent, LogisticComponent, AdminComponent }) => {
   if (sudoUserType === userTypes.Customer) {
@@ -32,7 +33,6 @@ export const pages = [
     guarded: false,
     // permission: [userTypes.Admin, userTypes.Customer],
   },
-
 ];
 
 export const appPages = [
@@ -63,7 +63,6 @@ export const appPages = [
       },
     ],
   },
-
   {
     label: 'Properties',
     path: '/properties',
@@ -80,8 +79,22 @@ export const appPages = [
       },
     ],
   },
-
-
+  {
+    // label: 'Properties',
+    path: '/add-properties',
+    exact: true,
+    children: AppLayout({})(AddProperties),
+    sidebar: true,
+    guarded: true,
+    // icon: <i className="fi fi-rr-package"></i>,
+    permission: [userTypes.Customer, userTypes.Admin],
+    // options: [
+    //   {
+    //     label: 'Add Property',
+    //     path: '/add-property',
+    //   },
+    // ],
+  },
 ];
 
 export const routes = [...appPages, ...pages];

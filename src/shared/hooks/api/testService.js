@@ -67,39 +67,6 @@ export const employees = async ({}) => {
         id: '3',
         _id: '3',
       },
-      {
-        fullName: 'John Doe 1',
-        imported: 'Black Gucci Jacket',
-        expired: 'Tops and Casual',
-        condition: '55 left',
-        id: '4',
-        _id: '4',
-      },
-      {
-        fullName: 'John Doe 1',
-        imported: 'Black Gucci Jacket',
-        expired: 'Tops and Casual',
-        condition: '55 left',
-        id: '5',
-        _id: '5',
-      },
-
-      {
-        fullName: 'John Doe 1',
-        imported: 'Black Gucci Jacket',
-        expired: 'Tops and Casual',
-        condition: '55 left',
-        id: '7',
-        _id: '7',
-      },
-      {
-        fullName: 'John Doe 1',
-        imported: 'Black Gucci Jacket',
-        expired: 'Tops and Casual',
-        condition: '55 left',
-        id: '3',
-        _id: '3',
-      },
 
       // {
       //   fullName: 'John Doe 6',
