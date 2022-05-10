@@ -1,0 +1,35 @@
+@import '../../styles/scss/variables.scss';
+
+.card-wrapper {
+  height: auto;
+  padding: 15px 22px;
+
+  background-color: white;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 7px #ccc;
+  transition: all 0.15s ease;
+  .icons-holder {
+    margin: 0 10px;
+  }
+  .detail-wrapper {
+    .title {
+      font-weight: 24px;
+      font-weight: 500;
+    }
+    .details {
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+}
+.selected {
+  border-top-right-radius: 17px;
+  transition: border 0.15s ease-out;
+
+  border: 2px solid $dark-background;
+}

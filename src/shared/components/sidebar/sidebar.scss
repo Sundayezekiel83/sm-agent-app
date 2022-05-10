@@ -1,0 +1,152 @@
+@import '../../styles/scss/variables.scss';
+
+.sidebar {
+  min-height: 100vh;
+  width: max-content;
+  background: white;
+  overflow-x: hidden;
+  .inner-bar {
+    padding: 15px 0px 15px 0px;
+    .header {
+      height: 65px;
+      .adjust-menu-bar {
+        position: relative !important;
+        margin-left: 22px;
+      }
+      .sidebar-logo {
+        margin-top: 10px;
+        height: 20px;
+      }
+      svg {
+        float: left;
+        margin-top: -20.5px;
+        margin-left: 20px;
+      }
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+    .ppaction {
+      .profile-holder {
+        display: flex;
+        justify-content: space-around;
+        .name-circle {
+          border-radius: 50%;
+          color: white;
+          background-color: $dark-background;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          margin-left: 10px;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: 10px;
+            font-weight: 500;
+          }
+        }
+        .d-none {
+          display: none;
+          transform: display 0.5s ease-out;
+        }
+        .detail-holder {
+          transform: display 0.5s ease-out;
+          .position {
+            font-weight: bold;
+            font-size: 16px !important;
+          }
+          .name {
+            font-weight: 500;
+            font-size: 14px !important;
+            color: grey;
+          }
+        }
+        .caret-icon {
+          margin-right: 10px;
+          transform: display 0.5s ease-out;
+        }
+      }
+      .business-wrapper {
+        height: 60px;
+        background-color: $dark-background-300;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        transition: height 0.3s ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .add-action {
+          opacity: 1;
+          transition: opacity 0.2s ease;
+          color: $dark-background;
+          svg.plus-icon {
+            margin-right: 7px;
+            font-size: 20;
+          }
+          span {
+            font-size: 16px;
+            font-weight: 600;
+          }
+          @media (max-width: $sm) {
+            svg.plus-icon {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .hide {
+        height: 0;
+        transition: height 0.3s ease;
+        .add-action {
+          opacity: 0;
+          transition: opacity 0.2 ease;
+        }
+      }
+    }
+    .main,
+    .settings {
+      // border: 1px solid white;
+      color: white;
+      .option {
+        display: flex;
+        cursor: pointer;
+        color: rgb(163, 163, 163);
+        padding: 10px 20px 10px 27px;
+        font-weight: 500;
+        // justify-content: space-between;
+        i {
+          font-size: 22px;
+          color: rgb(163, 163, 163);
+
+          &:hover {
+            color: $blue;
+            transition: all 0.3s ease-in;
+          }
+        }
+        &:hover {
+          color: $blue;
+          transition: all 0.3s ease-in;
+          i {
+            color: $blue;
+            transition: all 0.3s ease-in;
+          }
+        }
+        span {
+          padding: 0 25px;
+        }
+        margin-bottom: 5px;
+      }
+      .active-navlink {
+        color: $blue;
+        transition: all 0.3s ease-in;
+        i {
+          color: $blue;
+          transition: all 0.3s ease-in;
+        }
+      }
+    }
+  }
+}
