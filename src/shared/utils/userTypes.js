@@ -1,5 +1,5 @@
 export const userTypes = {
-  Admin: 'admin',
-  Logistic: 'logistic',
-  Customer: 'customer',
+  Admin: 'Admin',
+  Customer: 'Customer',
+  User: 'User',
 };

@@ -1,19 +1,19 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { sudoUserType } from '../default';
+import { useAuthState } from '../context/useAuthContext';
 
 const PermissionRoute = ({ ...props }) => {
   let route;
+  const { user } = useAuthState();
   if (props.component) {
     route = <Route {...props} />;
   } else {
     route = <Route {...props}>{props.children}</Route>;
   }
-
-  const redirect = <Redirect to="/error" />;
+  const redirect = <Redirect to="/" />;
 
   if (props.permissions) {
-    if (props.permissions.includes(sudoUserType)) {
+    if (props.permissions.includes(user.permission)) {
       return route;
     } else {
       return redirect;
@@ -24,10 +24,6 @@ const PermissionRoute = ({ ...props }) => {
 };
 
 export default PermissionRoute;
-
-
-
-
 
 // import React from 'react';
 // import { Redirect, Route } from 'react-router-dom';
@@ -46,5 +42,3 @@ export default PermissionRoute;
 // };
 
 // export default PermissionedRoute;
-
-

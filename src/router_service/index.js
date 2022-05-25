@@ -7,20 +7,21 @@ import AppLayout from '../pages/shared/applayout/applayout';
 import { userTypes } from '../shared/utils/userTypes';
 import MyProperties from '../pages/mainpages/admin/properties/MyProperties';
 import AddProperties from '../pages/mainpages/admin/addproduct/addproperties';
+import { useAuthState } from '../context/useAuthContext';
 
-const roleComponent = ({ CustomerComponent, LogisticComponent, AdminComponent }) => {
-  if (sudoUserType === userTypes.Customer) {
-    return CustomerComponent;
-  } else if (sudoUserType === userTypes.Logistic) {
-    return LogisticComponent;
-  } else {
-    return AdminComponent;
-  }
-};
+// const roleComponent = ({ CustomerComponent: UserComponent, AdminComponent }) => {
+//   const { user } = useAuthState();
+
+//   if (user.permissions === userTypes.Customer) {
+//     return UserComponent;
+//   } else {
+//     return AdminComponent;
+//   }
+// };
 
 export const pages = [
   {
-    path: '/login',
+    path: '/',
     exact: true,
     component: Login,
     guarded: false,
@@ -38,14 +39,13 @@ export const pages = [
 export const appPages = [
   {
     label: 'Dashboard',
-    path: '/',
+    path: '/dashboard',
     exact: true,
-    children: roleComponent({
-      AdminComponent: AppLayout({})(AdminDashboard),
-    }),
+    children: AppLayout({})(AdminDashboard),
     sidebar: true,
     guarded: true,
     icon: <i className="fi fi-rr-apps"></i>,
+    permissions: [userTypes.Admin],
   },
   {
     label: 'Products',
@@ -55,7 +55,7 @@ export const appPages = [
     sidebar: true,
     guarded: true,
     icon: <i className="fi fi-rr-package"></i>,
-    permission: [userTypes.Customer, userTypes.Admin],
+    permissions: [userTypes.User, userTypes.Admin],
     options: [
       {
         label: 'Add Product',
@@ -71,7 +71,7 @@ export const appPages = [
     sidebar: true,
     guarded: true,
     icon: <i className="fi fi-rr-package"></i>,
-    permission: [userTypes.Customer, userTypes.Admin],
+    permissions: [userTypes.User, userTypes.Admin],
     options: [
       {
         label: 'Add Property',
@@ -87,7 +87,7 @@ export const appPages = [
     sidebar: true,
     guarded: true,
     // icon: <i className="fi fi-rr-package"></i>,
-    permission: [userTypes.Customer, userTypes.Admin],
+    permissions: [userTypes.Admin],
     // options: [
     //   {
     //     label: 'Add Property',
